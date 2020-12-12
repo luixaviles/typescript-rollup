@@ -1,0 +1,27 @@
+{
+  "name": "typescript-rollup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luixaviles/typescript-rollup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luixaviles/typescript-rollup/issues"
+  },
+  "homepage": "https://github.com/luixaviles/typescript-rollup#readme",
+  "devDependencies": {
+    "@open-wc/building-rollup": "^1.9.4",
+    "deepmerge": "^4.2.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.34.2",
+    "typescript": "^4.1.3"
+  }
+}
