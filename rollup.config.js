@@ -1,11 +1,12 @@
 import merge from 'deepmerge';
-import { createBasicConfig } from '@open-wc/building-rollup';
+import { createSpaConfig } from '@open-wc/building-rollup';
  
-const baseConfig = createBasicConfig();
+const baseConfig = createSpaConfig({
+  developmentMode: process.env.ROLLUP_WATCH === 'true',
+  injectServiceWorker: false
+});
  
 export default merge(baseConfig, {
-  input: './out-tsc/src/app.js',
-  output: {
-      dir: 'dist',
-  }
+  // any <script type="module"> inside will be bundled by rollup
+  input: './index.html'
 });

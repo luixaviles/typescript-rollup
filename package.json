@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "tsc:watch": "tsc --watch",
+    "start:single": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --app-index index.html --node-resolve --open --watch\"",
+    "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --config web-dev-server.config.js\"",
     "build": "rimraf dist && tsc && rollup -c rollup.config.js"
   },
   "repository": {
@@ -19,6 +22,8 @@
   "homepage": "https://github.com/luixaviles/typescript-rollup#readme",
   "devDependencies": {
     "@open-wc/building-rollup": "^1.9.4",
+    "@web/dev-server": "0.0.29",
+    "concurrently": "^5.3.0",
     "deepmerge": "^4.2.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.34.2",
