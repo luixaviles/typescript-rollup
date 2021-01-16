@@ -1,3 +1,6 @@
 node_modules
 out-tsc
 dist
+
+# Environment variables
+env-config.json

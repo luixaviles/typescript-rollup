@@ -10,6 +10,8 @@
     "outDir": "out-tsc",
     "rootDir": "./",
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   }
   ,
   "include": ["./src/**/*.ts"]

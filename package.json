@@ -22,7 +22,9 @@
   "homepage": "https://github.com/luixaviles/typescript-rollup#readme",
   "devDependencies": {
     "@open-wc/building-rollup": "^1.9.4",
+    "@rollup/plugin-json": "^4.1.0",
     "@web/dev-server": "0.0.29",
+    "@web/dev-server-rollup": "^0.3.2",
     "concurrently": "^5.3.0",
     "deepmerge": "^4.2.2",
     "rimraf": "^3.0.2",
